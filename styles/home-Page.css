@@ -1,0 +1,105 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #ACD9B2;
+  --blues: #93c9e2;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: beige;
+  margin: 0;
+}
+
+.container-card {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 20px;
+  width: 100%;
+  place-content: center;
+}
+
+.product-card {
+  width: 240px;
+}
+
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+  /* Ajusta la imagen al contenedor */
+
+}
+
+.information-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 240px;
+  margin-top: 12px;
+}
+
+.information-card figure img {
+  width: 35px;
+  height: 35px;
+}
+
+.information-card figure {
+  margin: 0px;
+  margin-top: 0px;
+}
+
+.information-card div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.information-card div p:nth-child(2) {
+  font-size: var(--sm);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+@media (max-width: 600px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .product-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    /* Ajusta la imagen al contenedor */
+
+  }
+
+  .information-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 140px;
+    margin-top: 12px;
+  }
+
+  .information-card figure img {
+    width: 20px;
+    height: 20px;
+  }
+}
